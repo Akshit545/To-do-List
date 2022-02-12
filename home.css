@@ -1,0 +1,165 @@
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:5rem 10rem;
+  background-color: antiquewhite;
+}
+
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: auto;
+  width: 70vw;
+}
+
+form{
+  width: 100%;
+}
+
+#desc-input, #duedate, #category{
+  transition: all 0.4s ease-in-out;
+  display: block;
+  outline: 0;
+  border: 0;
+  width: 100%;
+}
+
+#desc{
+  border-top: 1px solid lightgrey;
+}
+
+#desc-input::placeholder{
+  color: lightslategray;
+}
+
+#desc, #cate, #date{
+  transition: all 0.4s ease-in-out;
+  padding: 4px;
+  padding-left: 9px;
+  border-bottom: 1px solid lightgrey;
+}
+
+option{
+  background-color: white;
+}
+
+#container{
+  display: flex;
+  flex-direction: row;
+}
+
+#cate, #date{
+  width: 50%;
+}
+
+#cate{
+  border-right: 1px solid lightgrey;
+}
+
+#date{
+  border-left: 1px solid lightgrey;
+}
+
+#button-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+
+#button-area button{
+  margin: 1rem;
+  height: 6vh;
+  width: 10vw;
+}
+
+#submit{
+  position: relative;
+  background-color: rgb(81, 75, 75);
+  border: 0;
+}
+
+#submit:hover{
+  background-color: rgb(86, 64, 64);
+}
+
+#submit i{
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+}
+
+#submit p{
+  color: white;
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
+}
+
+#delete-task{
+  width: 13vw !important;
+  border: 0;
+  position: relative;
+  background-color: rgb(255, 72, 72);
+}
+
+#delete-task:hover {
+  background-color: rgb(255, 39, 39);
+}
+
+#delete-task i{
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 35%;
+}
+
+#delete-task p{
+  color: white;
+  margin: 0 0 0 1rem;
+  font-size: 1rem;
+}
+
+#display{
+  margin: auto;
+  width: 90%;
+}
+
+#card{
+  border-top: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 7rem;
+}
+
+#delete-inst{
+  width: 10%;
+  text-align: center;
+}
+
+#inst-details{
+  width: 70%;
+}
+
+#inst-date i{
+  color: lightgray;
+  margin: 5px 0;
+}
+
+#inst-details h1{
+  margin: 5px 0;
+}
+
+#inst-type{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightblue;
+  height: 3rem;
+}
