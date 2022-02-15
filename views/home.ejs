@@ -7,14 +7,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-  <link rel="stylesheet" href="home.css">
-  <title>TO-DO list</title>
+  <link rel="stylesheet" href="/home.css">
+  <title>
+    <%= title %>
+  </title>
 </head>
 
 <body>
   <div id="main">
     <h1>TO DO App</h1>
-    <form action="">
+    <form action="/create-list" method="post">
       <div id="desc">
         <label for="description">Description</label>
         <input type="text" name="description" id="desc-input" placeholder="What do you need to do?" required>
@@ -22,7 +24,7 @@
       <div id="container">
         <div id="cate">
           <label for="category">Category</label>
-          <select name="category" id="category">
+          <select name="category" id="category" required>
             <option value="CHoose" disabled>Choose one option</option>
             <option value="personal">Personal</option>
             <option value="work">Work</option>
@@ -33,7 +35,7 @@
         </div>
         <div id="date">
           <label for="date">Due date</label>
-          <input type="date" name="date" id="duedate">
+          <input type="date" name="date" id="duedate" required>
         </div>
       </div>
       <div id="button-area">
@@ -41,49 +43,41 @@
           <i class="fas fa-plus"></i>
           <p>ADD TASK</h2>
         </button>
-        <button id="delete-task">
+        <button id="delete-task" form="delete-inst">
           <i class="fa fa-trash"></i>
           <p>DELETE TASK</p>
         </button>
       </div>
     </form>
-    <div id="display">
-      <div id="card">
-        <form id="delete-inst" action="">
-          <input type="checkbox" name="check" id="check">
-        </form>
-        <div id="inst-details">
-          <h1>dsfdsdf</h1>
-          <div id="inst-date">
-            <i class="fas fa-calendar-alt    "></i>
-            <span>date</span>
+
+    <% for(let i of list){ %>
+      <div id="display">
+        <div id="card">
+          <form id="delete-inst" action="/delete-list" method="post">
+            <input type="checkbox" name="check" id="check">
+          </form>
+          <div id="inst-details">
+            <h1>
+              <%= i.description %>
+            </h1>
+            <div id="inst-date">
+              <i class="fas fa-calendar-alt"></i>
+              <span>
+                <%= i.date %>
+              </span>
+            </div>
+          </div>
+          <div id="inst-type">
+            <span>
+              <%= i.category %>
+            </span>
           </div>
         </div>
-        <div id="inst-type">
-          <span>work</span>
-        </div>
       </div>
-    </div>
-    <div id="display">
-      <div id="card">
-        <form id="delete-inst" action="">
-          <input type="checkbox" name="check" id="check">
-        </form>
-        <div id="inst-details">
-          <h1>dsfdsdf</h1>
-          <div id="inst-date">
-            <i class="fas fa-calendar-alt    "></i>
-            <span>date</span>
-          </div>
-        </div>
-        <div id="inst-type">
-          <span>work</span>
-        </div>
-      </div>
-    </div>
+      <% } %>
   </div>
   <script src="jquery/jquery-3.6.0.js"></script>
-  <script src="home.js"></script>
+  <script src="/home.js"></script>
 </body>
 
 </html>
