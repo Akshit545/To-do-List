@@ -43,7 +43,7 @@
           <i class="fas fa-plus"></i>
           <p>ADD TASK</h2>
         </button>
-        <button id="delete-task" form="delete-inst">
+        <button id="delete-task" form="delete-it">
           <i class="fa fa-trash"></i>
           <p>DELETE TASK</p>
         </button>
@@ -53,8 +53,9 @@
     <% for(let i of list){ %>
       <div id="display">
         <div id="card">
-          <form id="delete-inst" action="/delete-list" method="post">
+          <form id="delete-inst" action="" method="post">
             <input type="checkbox" name="check" id="check">
+            <input type="text" name="id" value="<%= i._id %>" hidden>
           </form>
           <div id="inst-details">
             <h1>

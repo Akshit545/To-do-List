@@ -3,7 +3,7 @@ body{
   align-items: center;
   justify-content: center;
   padding:5rem 10rem;
-  background-color: antiquewhite;
+  background-color: rgb(126, 128, 128);
 }
 
 #main{
@@ -13,11 +13,11 @@ body{
   align-items: center;
   background-color: white;
   height: auto;
-  width: 70vw;
+  width: 60vw;
 }
 
 form{
-  width: 100%;
+  width: 90%;
 }
 
 #desc-input, #duedate, #category{
@@ -26,6 +26,10 @@ form{
   outline: 0;
   border: 0;
   width: 100%;
+}
+
+#desc:hover, #container:hover, #desc:hover #desc-input, #container:hover #duedate, #container:hover #category{
+  background-color: rgb(231, 205, 205);
 }
 
 #desc{
@@ -73,7 +77,7 @@ option{
 
 #button-area button{
   margin: 1rem;
-  height: 6vh;
+  height: 7vh;
   width: 10vw;
 }
 
@@ -137,7 +141,7 @@ option{
   height: 7rem;
 }
 
-#delete-inst{
+#delete-inst, #delete-it{
   width: 10%;
   text-align: center;
 }

@@ -34,8 +34,17 @@ router.post('/create-list', function (req, res) {
   });
 });
 
-router.post('/delete-task', function (req, res) {
-
+router.post('/delete-list', function (req, res) {
+  // if (req.body.check == 'on')
+  // console.log(req.body);
+  var id = req.body.id;
+  Todo.findByIdAndDelete(id, function (err) {
+    if (err) {
+      console.log('error in deleting list data');
+      return;
+    }
+    return res.redirect('back');
+  });
 });
 
 module.exports = router;
