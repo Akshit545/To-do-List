@@ -6,6 +6,10 @@ body{
   background-color: rgb(126, 128, 128);
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 #main{
   display: flex;
   flex-direction: column;
@@ -157,6 +161,7 @@ option{
 
 #inst-details{
   width: 70%;
+  text-transform: capitalize;
 }
 
 #inst-date i{
@@ -175,4 +180,10 @@ option{
   align-items: center;
   background-color: lightblue;
   height: 3rem;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+#type{
+  color: white;
 }

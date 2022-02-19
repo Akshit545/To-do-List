@@ -68,11 +68,22 @@
               </span>
             </div>
           </div>
-          <div id="inst-type">
-            <span id="type">
-              <%= i.category %>
-            </span>
-          </div>
+          <% var color %>
+            <% if(i.category=='personal' ){ %>
+              <% color='blue' } %>
+                <% if(i.category=='work' ){ %>
+                  <% color='#9C27B0' } %>
+                    <% if(i.category=='school' ){ %>
+                      <% color='#2196F3' } %>
+                        <% if(i.category=='cleaning' ){ %>
+                          <% color='#388E3C' } %>
+                            <% if(i.category=='other' ){ %>
+                              <% color='#AB47BC' } %>
+                                <div id="inst-type" style="background-color: <%= color %>">
+                                  <span id="type">
+                                    <%= i.category %>
+                                  </span>
+                                </div>
         </div>
       </div>
       <% } %>
