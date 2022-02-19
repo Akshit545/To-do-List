@@ -1,6 +1,6 @@
 $('#desc-input').focus(function () {
-  $('#desc-input').css('backgroundColor', 'rgb(213, 178, 178)');
-  $('#desc').css('backgroundColor', 'rgb(213, 178, 178)');
+  $('#desc-input').css('backgroundColor', 'lightgrey');
+  $('#desc').css('backgroundColor', 'lightgrey');
 });
 
 $('#desc-input').blur(function () {
@@ -9,8 +9,8 @@ $('#desc-input').blur(function () {
 });
 
 $('#category').focus(function () {
-  $('#cate').css('backgroundColor', 'rgb(213, 178, 178)');
-  $('#category').css('backgroundColor', 'rgb(213, 178, 178)');
+  $('#cate').css('backgroundColor', 'lightgrey');
+  $('#category').css('backgroundColor', 'lightgrey');
 });
 
 $('#category').blur(function () {
@@ -19,8 +19,8 @@ $('#category').blur(function () {
 });
 
 $('#duedate').focus(function () {
-  $('#date').css('backgroundColor', 'rgb(213, 178, 178)');
-  $('#duedate').css('backgroundColor', 'rgb(213, 178, 178)');
+  $('#date').css('backgroundColor', 'lightgrey');
+  $('#duedate').css('backgroundColor', 'lightgrey');
 });
 
 $('#duedate').blur(function () {
@@ -31,7 +31,11 @@ $('#duedate').blur(function () {
 $('input[id=check]').click(function (e) {
   $('input[id=check]:checked').parent().attr('action', 'delete-list');
   $('input[id=check]:checked').parent().attr('id', 'delete-it');
-  $('#inst-details').css("color", "lightgrey");
-  $('#inst-details h1').css("text-decoration", "line-through");
-  $('#inst-date').css("text-decoration", "line-through");
+  // $($('input[id=check]:checked').parent().parent().parent()[0].id + ' ').css(propertyName, value);
+  $('input[id=check]:checked').parent().parent().children('#inst-details').css(
+    {
+      textDecoration: 'line-through',
+      color: 'lightgrey'
+    }
+  );
 });

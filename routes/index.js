@@ -29,7 +29,7 @@ router.post('/create-list', function (req, res) {
       console.log('error in creating list', err);
       return;
     }
-    console.log('***********', newtodo);
+    // console.log('***********', newtodo);
     return res.redirect('back');
   });
 });

@@ -16,6 +16,14 @@ body{
   width: 60vw;
 }
 
+#main > h1{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(61, 56, 56);
+}
+
 form{
   width: 90%;
 }
@@ -28,9 +36,9 @@ form{
   width: 100%;
 }
 
-#desc:hover, #container:hover, #desc:hover #desc-input, #container:hover #duedate, #container:hover #category{
+/* #desc:hover, #container:hover, #desc:hover #desc-input, #container:hover #duedate, #container:hover #category{
   background-color: rgb(231, 205, 205);
-}
+} */
 
 #desc{
   border-top: 1px solid lightgrey;
@@ -45,6 +53,7 @@ form{
   padding: 4px;
   padding-left: 9px;
   border-bottom: 1px solid lightgrey;
+  border-radius: 7px;
 }
 
 option{
