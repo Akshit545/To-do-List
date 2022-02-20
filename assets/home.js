@@ -28,14 +28,28 @@ $('#duedate').blur(function () {
   $('#duedate').css('backgroundColor', 'white');
 });
 
-$('input[id=check]').click(function (e) {
-  $('input[id=check]:checked').parent().attr('action', 'delete-list');
-  $('input[id=check]:checked').parent().attr('id', 'delete-it');
-  // $($('input[id=check]:checked').parent().parent().parent()[0].id + ' ').css(propertyName, value);
-  $('input[id=check]:checked').parent().parent().children('#inst-details').css(
-    {
-      textDecoration: 'line-through',
-      color: 'lightgrey'
+$('input[id=check]').click(function () {
+  for (var i = 0; i < $('input[id=check]').length; i++) {
+    // console.log('dada');
+    if ($('input[id=check]').eq(i).is(':checked')) {
+      $('input[id=check]').eq(i).parent().attr('action', 'delete-list');
+      $('input[id=check]').eq(i).parent().attr('id', 'delete-it');
+      $('input[id=check]').eq(i).parent().parent().children('#inst-details').css(
+        {
+          textDecoration: 'line-through',
+          color: 'lightgrey'
+        }
+      );
     }
-  );
+    else {
+      $('input[id=check]').eq(i).parent().attr('action', '');
+      $('input[id=check]').eq(i).parent().attr('id', 'delete-inst');
+      $('input[id=check]').eq(i).parent().parent().children('#inst-details').css(
+        {
+          textDecoration: 'none',
+          color: 'black'
+        }
+      );
+    }
+  }
 });
