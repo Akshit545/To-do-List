@@ -1,16 +1,16 @@
-body{
+body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:5rem 10rem;
+  padding: 5rem;
   background-color: rgb(126, 128, 128);
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-#main{
+#main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
   width: 60vw;
 }
 
-#main > h1{
+#main>h1 {
   font-family: 'Courier New', Courier, monospace;
   font-size: 3rem;
   margin-top: 10px;
@@ -28,11 +28,13 @@ body::-webkit-scrollbar{
   color: rgb(61, 56, 56);
 }
 
-form{
+form {
   width: 90%;
 }
 
-#desc-input, #duedate, #category{
+#desc-input,
+#duedate,
+#category {
   transition: all 0.4s ease-in-out;
   display: block;
   outline: 0;
@@ -44,15 +46,17 @@ form{
   background-color: rgb(231, 205, 205);
 } */
 
-#desc{
+#desc {
   border-top: 1px solid lightgrey;
 }
 
-#desc-input::placeholder{
+#desc-input::placeholder {
   color: lightslategray;
 }
 
-#desc, #cate, #date{
+#desc,
+#cate,
+#date {
   transition: all 0.4s ease-in-out;
   padding: 4px;
   padding-left: 9px;
@@ -60,64 +64,65 @@ form{
   border-radius: 7px;
 }
 
-option{
+option {
   background-color: white;
 }
 
-#container{
+#container {
   display: flex;
   flex-direction: row;
 }
 
-#cate, #date{
+#cate,
+#date {
   width: 50%;
 }
 
-#cate{
+#cate {
   border-right: 1px solid lightgrey;
 }
 
-#date{
+#date {
   border-left: 1px solid lightgrey;
 }
 
-#button-area{
+#button-area {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 15vh;
 }
 
-#button-area button{
+#button-area button {
   margin: 1rem;
   height: 7vh;
   width: 10vw;
 }
 
-#submit{
+#submit {
   position: relative;
   background-color: rgb(81, 75, 75);
   border: 0;
 }
 
-#submit:hover{
+#submit:hover {
   background-color: rgb(86, 64, 64);
 }
 
-#submit i{
+#submit i {
   color: white;
   position: absolute;
   left: 10%;
   top: 35%;
 }
 
-#submit p{
+#submit p {
   color: white;
   margin: 0 0 0 1rem;
   font-size: 1rem;
 }
 
-#delete-task{
+#delete-task {
   width: 13vw !important;
   border: 0;
   position: relative;
@@ -128,52 +133,55 @@ option{
   background-color: rgb(255, 39, 39);
 }
 
-#delete-task i{
+#delete-task i {
   color: white;
   position: absolute;
   left: 10%;
   top: 35%;
 }
 
-#delete-task p{
+#delete-task p {
   color: white;
   margin: 0 0 0 1rem;
   font-size: 1rem;
 }
 
-#display{
+#display {
   margin: auto;
   width: 90%;
 }
 
-#card{
+#card {
   border-top: 1px solid lightgrey;
   display: flex;
   align-items: center;
   justify-content: space-around;
   height: 7rem;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
-#delete-inst, #delete-it{
+#delete-inst,
+#delete-it {
   width: 10%;
   text-align: center;
 }
 
-#inst-details{
+#inst-details {
   width: 70%;
   text-transform: capitalize;
 }
 
-#inst-date i{
+#inst-date i {
   color: lightgray;
   margin: 5px 0;
 }
 
-#inst-details h1{
+#inst-details h1 {
   margin: 5px 0;
 }
 
-#inst-type{
+#inst-type {
   width: 20%;
   display: flex;
   justify-content: center;
@@ -184,6 +192,36 @@ option{
   text-transform: capitalize;
 }
 
-#type{
+#type {
   color: white;
+}
+
+@media only screen and (max-width:1200px) {
+  #main {
+    width: 80vw;
+  }
+
+  #inst-details {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:1000px) {
+  #main {
+    width: 80vw;
+  }
+
+  #inst-details {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width:800px) {
+  #main {
+    width: 80vw;
+  }
+
+  #inst-details {
+    width: 50%;
+  }
 }
