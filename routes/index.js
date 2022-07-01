@@ -12,9 +12,25 @@ router.get('/', function (req, res) {
       console.log('error in fetching list');
       return;
     }
+    var color = [];
+    for (let i in Todo) {
+      // console.log(i);
+      if (Todo.at(i).category == 'personal')
+        color.push("blue");
+      if (Todo.at(i).category == 'work')
+        color.push('#9C27B0');
+      if (Todo.at(i).category == 'school')
+        color.push('#2196F3');
+      if (Todo.at(i).category == 'cleaning')
+        color.push('#388E3C');
+      if (Todo.at(i).category == 'other')
+        color.push('#AB47BC');
+    }
+    // console.log(color);
     return res.render('home', {
       title: 'Home',
-      list: Todo
+      list: Todo,
+      Color: color
     });
   })
 });

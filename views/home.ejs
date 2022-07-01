@@ -50,40 +50,30 @@
       </div>
     </form>
 
-    <% for(let i of list){ %>
+    <% for(let i=0; i<list.length; i++){ %>
       <div id="display">
         <div id="card">
           <form id="delete-inst" action="" method="post">
             <input type="checkbox" name="check" id="check">
-            <input type="text" name="id" value="<%= i._id %>" hidden>
+            <input type="text" name="id" value="<%= list[i]._id %>" hidden>
           </form>
           <div id="inst-details">
             <h1>
-              <%= i.description %>
+              <%= list[i].description %>
             </h1>
             <div id="inst-date">
               <i class="fas fa-calendar-alt"></i>
               <span>
-                <%= i.date %>
+                <%= list[i].date %>
               </span>
             </div>
           </div>
-          <% var color %>
-            <% if(i.category=='personal' ){ %>
-              <% color='blue' } %>
-                <% if(i.category=='work' ){ %>
-                  <% color='#9C27B0' } %>
-                    <% if(i.category=='school' ){ %>
-                      <% color='#2196F3' } %>
-                        <% if(i.category=='cleaning' ){ %>
-                          <% color='#388E3C' } %>
-                            <% if(i.category=='other' ){ %>
-                              <% color='#AB47BC' } %>
-                                <div id="inst-type" style="background-color: <%= color %>">
-                                  <span id="type">
-                                    <%= i.category %>
-                                  </span>
-                                </div>
+
+          <div id="inst-type" style="background-color: <%= Color[i] %>">
+            <span id="type">
+              <%= list[i].category %>
+            </span>
+          </div>
         </div>
       </div>
       <% } %>
